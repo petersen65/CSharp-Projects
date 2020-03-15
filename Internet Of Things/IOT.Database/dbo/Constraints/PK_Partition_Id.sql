@@ -1,0 +1,3 @@
+﻿ALTER TABLE [dbo].[Partition]
+	ADD CONSTRAINT [PK_Partition_Id]
+	PRIMARY KEY CLUSTERED ([Id] ASC)

@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>"DatabaseProject"</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>3.5</ProjectVersion>
+    <ProjectGuid>{64c96520-2736-4825-9bac-bcf34e243c36}</ProjectGuid>
+    <DSP>Microsoft.Data.Schema.Sql.SqlDsp.Sql100DatabaseSchemaProvider</DSP>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ShowWizard>True</ShowWizard>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <IncludeSchemaNameInFileName>True</IncludeSchemaNameInFileName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaType</DefaultFileStructure>
+    <DeployToDatabaseAddToServerExplorer>False</DeployToDatabaseAddToServerExplorer>
+    <DeployToScript>True</DeployToScript>
+    <CatalogPropertiesFile>Properties\Database.sqlsettings</CatalogPropertiesFile>
+    <ServerPropertiesFile>
+    </ServerPropertiesFile>
+    <RootNamespace>KissSpool Database</RootNamespace>
+    <DefaultSchema>dbo</DefaultSchema>
+    <PreviousProjectVersion>3.5</PreviousProjectVersion>
+    <AllowServerObjects>False</AllowServerObjects>
+    <AllowDatabaseObjects>True</AllowDatabaseObjects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>.\sql\release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetConnectionString>
+    </TargetConnectionString>
+    <TargetDatabase>KissSpool</TargetDatabase>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <SuppressWarnings>
+    </SuppressWarnings>
+    <DeploymentConfigFile>Properties\Database.sqldeployment</DeploymentConfigFile>
+    <SqlCommandVariablesFile>Properties\Database.sqlcmdvars</SqlCommandVariablesFile>
+    <DeployToDatabase>False</DeployToDatabase>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>.\sql\debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetConnectionString>Data Source=(local);Integrated Security=True;Pooling=False</TargetConnectionString>
+    <TargetDatabase>KissSpool</TargetDatabase>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <SuppressWarnings>
+    </SuppressWarnings>
+    <DeploymentConfigFile>Properties\Database.sqldeployment</DeploymentConfigFile>
+    <SqlCommandVariablesFile>Properties\Database.sqlcmdvars</SqlCommandVariablesFile>
+    <DeployToDatabase>False</DeployToDatabase>
+  </PropertyGroup>
+  <!--Import the settings-->
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\TeamData\Microsoft.Data.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="Schema Objects\" />
+    <Folder Include="Schema Objects\Assemblies\" />
+    <Folder Include="Schema Objects\Programmability\" />
+    <Folder Include="Schema Objects\Programmability\Database Triggers\" />
+    <Folder Include="Schema Objects\Programmability\Defaults\" />
+    <Folder Include="Schema Objects\Programmability\Functions\" />
+    <Folder Include="Schema Objects\Programmability\Rules\" />
+    <Folder Include="Schema Objects\Programmability\Stored Procedures\" />
+    <Folder Include="Schema Objects\Programmability\Types\" />
+    <Folder Include="Schema Objects\Programmability\Types\User Defined Data Types\" />
+    <Folder Include="Schema Objects\Programmability\Types\User Defined Table Types\" />
+    <Folder Include="Schema Objects\Programmability\Types\User Defined Types CLR\" />
+    <Folder Include="Schema Objects\Programmability\Types\XML Schema Collections\" />
+    <Folder Include="Schema Objects\Security\" />
+    <Folder Include="Schema Objects\Security\Asymmetric Keys\" />
+    <Folder Include="Schema Objects\Security\Certificates\" />
+    <Folder Include="Schema Objects\Security\Database Audit Specification\" />
+    <Folder Include="Schema Objects\Security\Database Encryption Keys\" />
+    <Folder Include="Schema Objects\Security\Master Keys\" />
+    <Folder Include="Schema Objects\Security\Roles\" />
+    <Folder Include="Schema Objects\Security\Roles\Application Roles\" />
+    <Folder Include="Schema Objects\Security\Roles\Database Roles\" />
+    <Folder Include="Schema Objects\Security\Schemas\" />
+    <Folder Include="Schema Objects\Security\Signatures\" />
+    <Folder Include="Schema Objects\Security\Symmetric Keys\" />
+    <Folder Include="Schema Objects\Security\Users\" />
+    <Folder Include="Schema Objects\Service Broker\" />
+    <Folder Include="Schema Objects\Service Broker\Broker Priorities\" />
+    <Folder Include="Schema Objects\Service Broker\Contracts\" />
+    <Folder Include="Schema Objects\Service Broker\Event Notifications\" />
+    <Folder Include="Schema Objects\Service Broker\Message Types\" />
+    <Folder Include="Schema Objects\Service Broker\Queues\" />
+    <Folder Include="Schema Objects\Service Broker\Remote Service Binding\" />
+    <Folder Include="Schema Objects\Service Broker\Routes\" />
+    <Folder Include="Schema Objects\Service Broker\Services\" />
+    <Folder Include="Schema Objects\Storage\" />
+    <Folder Include="Schema Objects\Storage\Filegroups\" />
+    <Folder Include="Schema Objects\Storage\Files\" />
+    <Folder Include="Schema Objects\Storage\Full Text Catalogs\" />
+    <Folder Include="Schema Objects\Storage\Full Text Stoplists\" />
+    <Folder Include="Schema Objects\Storage\Partition Functions\" />
+    <Folder Include="Schema Objects\Storage\Partition Schemes\" />
+    <Folder Include="Schema Objects\Synonyms\" />
+    <Folder Include="Schema Objects\Tables\" />
+    <Folder Include="Schema Objects\Tables\Constraints\" />
+    <Folder Include="Schema Objects\Tables\Indexes\" />
+    <Folder Include="Schema Objects\Tables\Keys\" />
+    <Folder Include="Schema Objects\Tables\Statistics\" />
+    <Folder Include="Schema Objects\Tables\Triggers\" />
+    <Folder Include="Schema Objects\Views\" />
+    <Folder Include="Schema Objects\Views\Indexes\" />
+    <Folder Include="Schema Objects\Views\Statistics\" />
+    <Folder Include="Schema Objects\Views\Triggers\" />
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\Pre-Deployment" />
+    <Folder Include="Scripts\Post-Deployment" />
+    <Folder Include="Data Generation Plans" />
+    <Folder Include="Schema Comparisons" />
+  </ItemGroup>
+  <ItemGroup>
+    <PropertiesFile Include="Properties\Database T.sqlcmdvars">
+      <SubType>PropertiesFile</SubType>
+    </PropertiesFile>
+    <PropertiesFile Include="Properties\Database.sqlsettings">
+    </PropertiesFile>
+    <PropertiesFile Include="Properties\Database.sqldeployment">
+    </PropertiesFile>
+    <PropertiesFile Include="Properties\Database.sqlcmdvars">
+    </PropertiesFile>
+    <Build Include="Properties\Database.sqlpermissions">
+      <ModelBuilderType>Permissions</ModelBuilderType>
+    </Build>
+    <Build Include="Schema Objects\Programmability\Stored Procedures\bundle.BundleProcessingQueueProcessor.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Programmability\Stored Procedures\kiss.NeighborhoodProcessingQueueProcessor.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Programmability\Stored Procedures\bundle.StageProcessingQueueProcessor.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Programmability\Stored Procedures\sd.DistributeStandingDataInstruction.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Security\Certificates\KissProcessingServiceCertificate.cert.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Security\Certificates\ZoraClientServiceCertificate.cert.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Security\Master Keys\KissSpool.masterkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Security\Schemas\bundle.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Security\Schemas\kiss.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Security\Schemas\sd.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Security\Users\KissProcessingServiceUser.user.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Security\Users\ZoraClientServiceUser.user.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Contracts\Bundle-Processing.contract.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Contracts\Neighborhood-Processing.contract.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Contracts\Stage-Processing.contract.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Contracts\ZoraClient-Processing.contract.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Message Types\Bundle.messagetype.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Message Types\Client-List.messagetype.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Message Types\Neighborhood.messagetype.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Message Types\PC-Deregistration.messagetype.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Message Types\PC-Registration.messagetype.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Message Types\Ping.messagetype.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Message Types\Stage-List.messagetype.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Message Types\Standing-Data-Instr.messagetype.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Queues\bundle.BundleProcessingQueue.queue.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Queues\kiss.NeighborhoodProcessingQueue.queue.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Queues\bundle.StageProcessingQueue.queue.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Queues\sd.StandingDataProcessingQueue.queue.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Remote Service Binding\ToZoraClient-FE-A.remoteservicebinding.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Remote Service Binding\ToZoraClient-FE-AXP.remoteservicebinding.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Remote Service Binding\ToZoraClient-FE-B.remoteservicebinding.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Remote Service Binding\ToZoraClient-FE-BXP.remoteservicebinding.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Remote Service Binding\ToZoraClient-FE-C.remoteservicebinding.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Remote Service Binding\ToZoraClient-FE-CXP.remoteservicebinding.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Remote Service Binding\ToZoraClient-FE-SQL.remoteservicebinding.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Routes\Zora Client.route.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Services\Bundle-Processing.service.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Services\Neighborhood-Processing.service.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Services\Stage-Processing.service.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Service Broker\Services\StandingData-Processing.service.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\bundle.BundleSpool.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\kiss.DeadLetter.PK_DeadLetter.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\kiss.NeighborhoodMaster.PK_NeighborhoodMaster.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\kiss.DeadLetter.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\kiss.NeighborhoodMaster.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\bundle.BundleSpool.PK_BundleSpool.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <PreDeploy Include="Scripts\Pre-Deployment\Script.PreDeployment.sql">
+      <SubType>Code</SubType>
+    </PreDeploy>
+    <PostDeploy Include="Scripts\Post-Deployment\Script.PostDeployment.sql">
+      <SubType>Code</SubType>
+    </PostDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <ArtifactReference Include="$(VSTSDBDirectory)\Extensions\SqlServer\2008\DBSchemas\Microsoft.SqlTypes.dbschema">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Visual Studio 9.0\VSTSDB\Extensions\SqlServer\2008\DBSchemas\Microsoft.SqlTypes.dbschema</HintPath>
+    </ArtifactReference>
+  </ItemGroup>
+</Project>

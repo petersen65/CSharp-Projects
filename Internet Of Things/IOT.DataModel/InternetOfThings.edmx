@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="CommandTopicAll" EntityType="Model.Store.CommandTopicAll" store:Type="Views" store:Schema="dbo" store:Name="CommandTopicAll">
+            <DefiningQuery>SELECT 
+      [CommandTopicAll].[Id] AS [Id], 
+      [CommandTopicAll].[RelativeId] AS [RelativeId], 
+      [CommandTopicAll].[MaximumSubscription] AS [MaximumSubscription], 
+      [CommandTopicAll].[CurrentSubscription] AS [CurrentSubscription], 
+      [CommandTopicAll].[PartitionId] AS [PartitionId]
+      FROM [dbo].[CommandTopicAll] AS [CommandTopicAll]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="PartitionAll" EntityType="Model.Store.PartitionAll" store:Type="Views" store:Schema="dbo" store:Name="PartitionAll">
+            <DefiningQuery>SELECT 
+      [PartitionAll].[Id] AS [Id], 
+      [PartitionAll].[Description] AS [Description], 
+      [PartitionAll].[Active] AS [Active], 
+      [PartitionAll].[Area] AS [Area], 
+      [PartitionAll].[MaximumCommandTopic] AS [MaximumCommandTopic], 
+      [PartitionAll].[MaximumSubscription] AS [MaximumSubscription], 
+      [PartitionAll].[Namespace] AS [Namespace], 
+      [PartitionAll].[EventStore] AS [EventStore], 
+      [PartitionAll].[Owner] AS [Owner], 
+      [PartitionAll].[OwnerSecret] AS [OwnerSecret], 
+      [PartitionAll].[StorageAccount] AS [StorageAccount], 
+      [PartitionAll].[AccessControl] AS [AccessControl], 
+      [PartitionAll].[AccessControlSecret] AS [AccessControlSecret], 
+      [PartitionAll].[LastUpdated] AS [LastUpdated]
+      FROM [dbo].[PartitionAll] AS [PartitionAll]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ThingAll" EntityType="Model.Store.ThingAll" store:Type="Views" store:Schema="dbo" store:Name="ThingAll">
+            <DefiningQuery>SELECT 
+      [ThingAll].[Id] AS [Id], 
+      [ThingAll].[Description] AS [Description], 
+      [ThingAll].[Active] AS [Active], 
+      [ThingAll].[Area] AS [Area], 
+      [ThingAll].[RelativeId] AS [RelativeId], 
+      [ThingAll].[PartitionId] AS [PartitionId], 
+      [ThingAll].[LastUpdated] AS [LastUpdated]
+      FROM [dbo].[ThingAll] AS [ThingAll]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Internet Of Things.dbo.CommandTopicAll' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="CommandTopicAll">
+          <Key>
+            <PropertyRef Name="Id" />
+            
+            
+            
+            
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RelativeId" Type="int" Nullable="false" />
+          <Property Name="MaximumSubscription" Type="int" Nullable="false" />
+          <Property Name="CurrentSubscription" Type="int" Nullable="false" />
+          <Property Name="PartitionId" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Internet Of Things.dbo.PartitionAll' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="PartitionAll">
+          <Key>
+            <PropertyRef Name="Id" />
+            
+            
+            
+            
+            
+            
+            
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="Area" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="MaximumCommandTopic" Type="int" Nullable="false" />
+          <Property Name="MaximumSubscription" Type="int" />
+          <Property Name="Namespace" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="EventStore" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Owner" Type="nvarchar" MaxLength="50" />
+          <Property Name="OwnerSecret" Type="nvarchar" MaxLength="100" />
+          <Property Name="StorageAccount" Type="nvarchar" MaxLength="255" />
+          <Property Name="AccessControl" Type="nvarchar" MaxLength="50" />
+          <Property Name="AccessControlSecret" Type="nvarchar" MaxLength="100" />
+          <Property Name="LastUpdated" Type="datetime2" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Internet Of Things.dbo.ThingAll' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="ThingAll">
+          <Key>
+            <PropertyRef Name="Id" />
+            
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="Area" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="RelativeId" Type="int" Nullable="false" />
+          <Property Name="PartitionId" Type="int" Nullable="false" />
+          <Property Name="LastUpdated" Type="datetime2" Nullable="false" />
+        </EntityType>
+        <Function Name="DeletePartition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="lastUpdated" Type="datetime2" Mode="In" />
+          <Parameter Name="rowsAffected" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="DeleteThing" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="lastUpdated" Type="datetime2" Mode="In" />
+          <Parameter Name="rowsAffected" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="InsertPartition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="description" Type="nvarchar" Mode="In" />
+          <Parameter Name="active" Type="bit" Mode="In" />
+          <Parameter Name="area" Type="nvarchar" Mode="In" />
+          <Parameter Name="maximumCommandTopic" Type="int" Mode="In" />
+          <Parameter Name="maximumSubscription" Type="int" Mode="In" />
+          <Parameter Name="namespace" Type="nvarchar" Mode="In" />
+          <Parameter Name="eventStore" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner" Type="nvarchar" Mode="In" />
+          <Parameter Name="ownerSecret" Type="nvarchar" Mode="In" />
+          <Parameter Name="storageAccount" Type="nvarchar" Mode="In" />
+          <Parameter Name="accessControl" Type="nvarchar" Mode="In" />
+          <Parameter Name="accessControlSecret" Type="nvarchar" Mode="In" />
+          <Parameter Name="rowsAffected" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="InsertThing" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="description" Type="nvarchar" Mode="In" />
+          <Parameter Name="active" Type="bit" Mode="In" />
+          <Parameter Name="area" Type="nvarchar" Mode="In" />
+          <Parameter Name="rowsAffected" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="UpdatePartition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="description" Type="nvarchar" Mode="In" />
+          <Parameter Name="active" Type="bit" Mode="In" />
+          <Parameter Name="eventStore" Type="nvarchar" Mode="In" />
+          <Parameter Name="lastUpdated" Type="datetime2" Mode="In" />
+          <Parameter Name="rowsAffected" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="UpdateThing" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="description" Type="nvarchar" Mode="In" />
+          <Parameter Name="active" Type="bit" Mode="In" />
+          <Parameter Name="lastUpdated" Type="datetime2" Mode="In" />
+          <Parameter Name="rowsAffected" Type="int" Mode="InOut" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="InternetOfThingsContext" p1:LazyLoadingEnabled="true" a:TypeAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration">
+          <EntitySet Name="Things" EntityType="Model.Thing" />
+          <EntitySet Name="Partitions" EntityType="Model.Partition" />
+          <AssociationSet Name="Thing_Partition_PartitionId_Id" Association="Model.Thing_Partition_PartitionId_Id">
+            <End Role="Partition" EntitySet="Partitions" />
+            <End Role="Thing" EntitySet="Things" />
+          </AssociationSet>
+          <EntitySet Name="CommandTopics" EntityType="Model.CommandTopic" a:GetterAccess="Internal" />
+          <AssociationSet Name="CommandTopic_Partition_PartitionId_Id" Association="Model.CommandTopic_Partition_PartitionId_Id">
+            <End Role="Partition" EntitySet="Partitions" />
+            <End Role="CommandTopic" EntitySet="CommandTopics" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Thing">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+          <Property Type="String" Name="Description" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" a:SetterAccess="Public" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+          <Property Type="Boolean" Name="Active" Nullable="false" a:SetterAccess="Public" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+          <Property Type="String" Name="Area" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+          <Property Type="Int32" Name="RelativeId" Nullable="false" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+          <Property Type="Int32" Name="PartitionId" Nullable="false" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+          <NavigationProperty Name="Partition" Relationship="Model.Thing_Partition_PartitionId_Id" FromRole="Thing" ToRole="Partition" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+          <Property Type="DateTime" Name="LastUpdated" Nullable="false" Precision="7" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+        </EntityType>
+        <EntityType Name="Partition">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+          <Property Type="String" Name="Description" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" a:SetterAccess="Public" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+          <Property Type="Boolean" Name="Active" Nullable="false" a:SetterAccess="Public" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+          <Property Type="String" Name="Area" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+          <Property Type="Int32" Name="MaximumCommandTopic" Nullable="false" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+          <Property Type="Int32" Name="MaximumSubscription" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" Nullable="true" />
+          <Property Type="String" Name="Namespace" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+          <Property Type="String" Name="EventStore" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" a:SetterAccess="Public" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+          <Property Type="String" Name="Owner" MaxLength="50" FixedLength="false" Unicode="true" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" Nullable="true" />
+          <Property Type="String" Name="OwnerSecret" MaxLength="100" FixedLength="false" Unicode="true" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" Nullable="true" />
+          <Property Type="String" Name="StorageAccount" MaxLength="255" FixedLength="false" Unicode="true" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" Nullable="true" />
+          <Property Type="String" Name="AccessControl" MaxLength="50" FixedLength="false" Unicode="true" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" Nullable="true" />
+          <Property Type="String" Name="AccessControlSecret" MaxLength="100" FixedLength="false" Unicode="true" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" Nullable="true" />
+          <NavigationProperty Name="Things" Relationship="Model.Thing_Partition_PartitionId_Id" FromRole="Partition" ToRole="Thing" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+          <NavigationProperty Name="CommandTopics" Relationship="Model.CommandTopic_Partition_PartitionId_Id" FromRole="Partition" ToRole="CommandTopic" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" a:GetterAccess="Public" />
+          <Property Type="DateTime" Name="LastUpdated" Nullable="false" Precision="7" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+        </EntityType>
+        <Association Name="Thing_Partition_PartitionId_Id">
+          <End Type="Model.Partition" Role="Partition" Multiplicity="1" />
+          <End Type="Model.Thing" Role="Thing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Partition">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Thing">
+              <PropertyRef Name="PartitionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="CommandTopic" a:TypeAccess="Public" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+          <Property Type="Int32" Name="RelativeId" Nullable="false" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+          <Property Type="Int32" Name="MaximumSubscription" Nullable="false" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+          <Property Type="Int32" Name="CurrentSubscription" Nullable="false" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+          <Property Type="Int32" Name="PartitionId" Nullable="false" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+          <NavigationProperty Name="Partition" Relationship="Model.CommandTopic_Partition_PartitionId_Id" FromRole="CommandTopic" ToRole="Partition" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" a:GetterAccess="Public" />
+        </EntityType>
+        <Association Name="CommandTopic_Partition_PartitionId_Id">
+          <End Type="Model.Partition" Role="Partition" Multiplicity="1" />
+          <End Type="Model.CommandTopic" Role="CommandTopic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Partition">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CommandTopic">
+              <PropertyRef Name="PartitionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="InternetOfThingsContext">
+          <EntitySetMapping Name="Things">
+            <EntityTypeMapping TypeName="Model.Thing">
+              <MappingFragment StoreEntitySet="ThingAll">
+                <ScalarProperty Name="RelativeId" ColumnName="RelativeId" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="PartitionId" ColumnName="PartitionId" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="Model.Thing">
+              <ModificationFunctionMapping>
+                <DeleteFunction FunctionName="Model.Store.DeleteThing" RowsAffectedParameter="rowsAffected" >
+                  <ScalarProperty Name="LastUpdated" ParameterName="lastUpdated" />
+                  <ScalarProperty Name="Id" ParameterName="id" />
+                </DeleteFunction>
+                <UpdateFunction FunctionName="Model.Store.UpdateThing" RowsAffectedParameter="rowsAffected" >
+                  <ScalarProperty Name="LastUpdated" ParameterName="lastUpdated" Version="Original" />
+                  <ScalarProperty Name="Active" ParameterName="active" Version="Current" />
+                  <ScalarProperty Name="Description" ParameterName="description" Version="Current" />
+                  <ScalarProperty Name="Id" ParameterName="id" Version="Original" />
+                  <ResultBinding Name="LastUpdated" ColumnName="LastUpdated" />
+                </UpdateFunction>
+                <InsertFunction FunctionName="Model.Store.InsertThing" RowsAffectedParameter="rowsAffected" >
+                  <ScalarProperty Name="Area" ParameterName="area" />
+                  <ScalarProperty Name="Active" ParameterName="active" />
+                  <ScalarProperty Name="Description" ParameterName="description" />
+                  <ScalarProperty Name="Id" ParameterName="id" />
+                  <ResultBinding Name="LastUpdated" ColumnName="LastUpdated" />
+                  <ResultBinding Name="RelativeId" ColumnName="RelativeId" />
+                </InsertFunction>
+              </ModificationFunctionMapping>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Partitions">
+            <EntityTypeMapping TypeName="Model.Partition">
+              <MappingFragment StoreEntitySet="PartitionAll">
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="MaximumSubscription" ColumnName="MaximumSubscription" />
+                <ScalarProperty Name="MaximumCommandTopic" ColumnName="MaximumCommandTopic" />
+                <ScalarProperty Name="AccessControlSecret" ColumnName="AccessControlSecret" />
+                <ScalarProperty Name="AccessControl" ColumnName="AccessControl" />
+                <ScalarProperty Name="StorageAccount" ColumnName="StorageAccount" />
+                <ScalarProperty Name="OwnerSecret" ColumnName="OwnerSecret" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="EventStore" ColumnName="EventStore" />
+                <ScalarProperty Name="Namespace" ColumnName="Namespace" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="Model.Partition">
+              <ModificationFunctionMapping>
+                <UpdateFunction FunctionName="Model.Store.UpdatePartition" RowsAffectedParameter="rowsAffected" >
+                  <ScalarProperty Name="LastUpdated" ParameterName="lastUpdated" Version="Original" />
+                  <ScalarProperty Name="EventStore" ParameterName="eventStore" Version="Current" />
+                  <ScalarProperty Name="Active" ParameterName="active" Version="Current" />
+                  <ScalarProperty Name="Description" ParameterName="description" Version="Current" />
+                  <ScalarProperty Name="Id" ParameterName="id" Version="Original" />
+                  <ResultBinding Name="LastUpdated" ColumnName="LastUpdated" />
+                </UpdateFunction>
+                <DeleteFunction FunctionName="Model.Store.DeletePartition" RowsAffectedParameter="rowsAffected" >
+                  <ScalarProperty Name="LastUpdated" ParameterName="lastUpdated" />
+                  <ScalarProperty Name="Id" ParameterName="id" />
+                </DeleteFunction>
+                <InsertFunction FunctionName="Model.Store.InsertPartition" RowsAffectedParameter="rowsAffected" >
+                  <ScalarProperty Name="AccessControlSecret" ParameterName="accessControlSecret" />
+                  <ScalarProperty Name="AccessControl" ParameterName="accessControl" />
+                  <ScalarProperty Name="StorageAccount" ParameterName="storageAccount" />
+                  <ScalarProperty Name="OwnerSecret" ParameterName="ownerSecret" />
+                  <ScalarProperty Name="Owner" ParameterName="owner" />
+                  <ScalarProperty Name="EventStore" ParameterName="eventStore" />
+                  <ScalarProperty Name="Namespace" ParameterName="namespace" />
+                  <ScalarProperty Name="MaximumSubscription" ParameterName="maximumSubscription" />
+                  <ScalarProperty Name="MaximumCommandTopic" ParameterName="maximumCommandTopic" />
+                  <ScalarProperty Name="Area" ParameterName="area" />
+                  <ScalarProperty Name="Active" ParameterName="active" />
+                  <ScalarProperty Name="Description" ParameterName="description" />
+                  <ResultBinding Name="Id" ColumnName="PartitionId" />
+                  <ResultBinding Name="LastUpdated" ColumnName="LastUpdated" />
+                </InsertFunction>
+              </ModificationFunctionMapping>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CommandTopics">
+            <EntityTypeMapping TypeName="Model.CommandTopic">
+              <MappingFragment StoreEntitySet="CommandTopicAll">
+                <ScalarProperty Name="PartitionId" ColumnName="PartitionId" />
+                <ScalarProperty Name="CurrentSubscription" ColumnName="CurrentSubscription" />
+                <ScalarProperty Name="MaximumSubscription" ColumnName="MaximumSubscription" />
+                <ScalarProperty Name="RelativeId" ColumnName="RelativeId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

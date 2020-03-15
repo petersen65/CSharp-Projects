@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Permissions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:Microsoft.VisualStudio.Data.Schema.Permissions" Version="1.0">
+  <PermissionStatement Action ="GRANT">
+    <Permission>CONTROL</Permission>
+    <Grantee>KissProcessingServiceUser</Grantee>
+    <Object Name="http://www.dpag.de/kiss/service/stage-processing" Type="SERVICE"/>
+  </PermissionStatement>
+  <PermissionStatement Action ="GRANT">
+    <Permission>CONTROL</Permission>
+    <Grantee>KissProcessingServiceUser</Grantee>
+    <Object Name="http://www.dpag.de/kiss/service/bundle-processing" Type="SERVICE"/>
+  </PermissionStatement>
+  <PermissionStatement Action ="GRANT">
+    <Permission>SEND</Permission>
+    <Grantee>ZoraClientServiceUser</Grantee>
+    <Object Name="http://www.dpag.de/kiss/service/neighborhood-processing" Type="SERVICE"/>
+  </PermissionStatement>
+  <PermissionStatement Action ="GRANT">
+    <Permission>SEND</Permission>
+    <Grantee>ZoraClientServiceUser</Grantee>
+    <Object Name="http://www.dpag.de/kiss/service/stage-processing" Type="SERVICE"/>
+  </PermissionStatement>
+  <PermissionStatement Action ="GRANT">
+    <Permission>SEND</Permission>
+    <Grantee>ZoraClientServiceUser</Grantee>
+    <Object Name="http://www.dpag.de/kiss/service/bundle-processing" Type="SERVICE"/>
+  </PermissionStatement>
+</Permissions>

@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DPAG.PoC.KISS.Core", "DPAG.PoC.KISS.Core\DPAG.PoC.KISS.Core.csproj", "{39BC0FD7-9000-483A-89E9-64AD9B3F9E79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DPAG.PoC.KISS.ZoraClient", "DPAG.PoC.KISS.ZoraClient\DPAG.PoC.KISS.ZoraClient.csproj", "{A15607F9-041A-4388-9C6A-941A790AFC18}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KISS SSSB Certificates", "KISS SSSB Certificates", "{4EAD9159-B0BA-4F29-AEC7-263ADC3418FA}"
+	ProjectSection(SolutionItems) = preProject
+		KISS SSSB Certificates\KissProcessingServerCertificate.cer = KISS SSSB Certificates\KissProcessingServerCertificate.cer
+		KISS SSSB Certificates\KissProcessingServerCertificate.pvk = KISS SSSB Certificates\KissProcessingServerCertificate.pvk
+		KISS SSSB Certificates\KissProcessingServiceCertificate.cer = KISS SSSB Certificates\KissProcessingServiceCertificate.cer
+		KISS SSSB Certificates\KissProcessingServiceCertificate.pvk = KISS SSSB Certificates\KissProcessingServiceCertificate.pvk
+		KISS SSSB Certificates\ZoraClientServiceCertificate.cer = KISS SSSB Certificates\ZoraClientServiceCertificate.cer
+		KISS SSSB Certificates\ZoraClientServiceCertificate.pvk = KISS SSSB Certificates\ZoraClientServiceCertificate.pvk
+		KISS SSSB Certificates\ZoraClientWorkstationCertificate.cer = KISS SSSB Certificates\ZoraClientWorkstationCertificate.cer
+		KISS SSSB Certificates\ZoraClientWorkstationCertificate.pvk = KISS SSSB Certificates\ZoraClientWorkstationCertificate.pvk
+	EndProjectSection
+EndProject
+Project("{C8D11400-126E-41CD-887F-60BD40844F9E}") = "KissSpool Database", "KissSpool Database\KissSpool Database.dbproj", "{64C96520-2736-4825-9BAC-BCF34E243C36}"
+EndProject
+Project("{C8D11400-126E-41CD-887F-60BD40844F9E}") = "Kiss Database", "Kiss Database\Kiss Database.dbproj", "{12B7A387-61BD-4519-8AF5-7A801C398D05}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KISS SQL Test Scripts", "KISS SQL Test Scripts", "{010AAC0D-381E-4104-948A-6C17972F9F84}"
+	ProjectSection(SolutionItems) = preProject
+		KISS SQL Test Scripts\Test Kiss Processing.sql = KISS SQL Test Scripts\Test Kiss Processing.sql
+		KISS SQL Test Scripts\Test Zora Client.sql = KISS SQL Test Scripts\Test Zora Client.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39BC0FD7-9000-483A-89E9-64AD9B3F9E79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39BC0FD7-9000-483A-89E9-64AD9B3F9E79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39BC0FD7-9000-483A-89E9-64AD9B3F9E79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39BC0FD7-9000-483A-89E9-64AD9B3F9E79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A15607F9-041A-4388-9C6A-941A790AFC18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A15607F9-041A-4388-9C6A-941A790AFC18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A15607F9-041A-4388-9C6A-941A790AFC18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A15607F9-041A-4388-9C6A-941A790AFC18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64C96520-2736-4825-9BAC-BCF34E243C36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64C96520-2736-4825-9BAC-BCF34E243C36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64C96520-2736-4825-9BAC-BCF34E243C36}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{64C96520-2736-4825-9BAC-BCF34E243C36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64C96520-2736-4825-9BAC-BCF34E243C36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64C96520-2736-4825-9BAC-BCF34E243C36}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{12B7A387-61BD-4519-8AF5-7A801C398D05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12B7A387-61BD-4519-8AF5-7A801C398D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12B7A387-61BD-4519-8AF5-7A801C398D05}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{12B7A387-61BD-4519-8AF5-7A801C398D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12B7A387-61BD-4519-8AF5-7A801C398D05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12B7A387-61BD-4519-8AF5-7A801C398D05}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

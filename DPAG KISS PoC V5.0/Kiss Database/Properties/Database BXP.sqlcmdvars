@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SqlCommandVariables xmlns="urn:Microsoft.VisualStudio.Data.Schema.Project.SqlCmdVars">
+  <Version>1</Version>
+  <Properties>
+    <Property>
+      <PropertyName>BranchId</PropertyName>
+      <PropertyValue>3</PropertyValue>
+    </Property>
+    <Property>
+      <PropertyName>CertificatesRootPath</PropertyName>
+      <PropertyValue>C:\Program Files\DPAG KISS PoC V5.0\KISS SSSB Certificates</PropertyValue>
+    </Property>
+    <Property>
+      <PropertyName>ClientId</PropertyName>
+      <PropertyValue>FE-BXP</PropertyValue>
+    </Property>
+    <Property>
+      <PropertyName>KissOwnerLogin</PropertyName>
+      <PropertyValue>kiss_owner</PropertyValue>
+    </Property>
+    <Property>
+      <PropertyName>KissProcessingLogin</PropertyName>
+      <PropertyValue>kiss_processing</PropertyValue>
+    </Property>
+    <Property>
+      <PropertyName>KissProcessingServer</PropertyName>
+      <PropertyValue>VS2008SP1</PropertyValue>
+    </Property>
+    <Property>
+      <PropertyName>KissProcessingServerPort</PropertyName>
+      <PropertyValue>5530</PropertyValue>
+    </Property>
+    <Property>
+      <PropertyName>LocalComputer</PropertyName>
+      <PropertyValue>WXP-ZORA-B</PropertyValue>
+    </Property>
+    <Property>
+      <PropertyName>ZoraClientWorkstationPort</PropertyName>
+      <PropertyValue>5524</PropertyValue>
+    </Property>
+  </Properties>
+</SqlCommandVariables>

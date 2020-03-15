@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Media.GettingStarted", "Media.GettingStarted\Media.GettingStarted.csproj", "{2A1EA46F-F5BF-4925-9AF2-20CFA0C28ECE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{5AFF82DE-F4FC-4B1A-A695-BCB8FBF52987}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Media.HowToSeries", "Media.HowToSeries\Media.HowToSeries.csproj", "{B5CF2346-F491-48C0-8265-5606251172E8}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://mikepet.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Media.GettingStarted\\Media.GettingStarted.csproj
+		SccProjectName1 = Media.GettingStarted
+		SccLocalPath1 = Media.GettingStarted
+		SccProjectUniqueName2 = Media.HowToSeries\\Media.HowToSeries.csproj
+		SccProjectName2 = Media.HowToSeries
+		SccLocalPath2 = Media.HowToSeries
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A1EA46F-F5BF-4925-9AF2-20CFA0C28ECE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A1EA46F-F5BF-4925-9AF2-20CFA0C28ECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A1EA46F-F5BF-4925-9AF2-20CFA0C28ECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A1EA46F-F5BF-4925-9AF2-20CFA0C28ECE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5CF2346-F491-48C0-8265-5606251172E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5CF2346-F491-48C0-8265-5606251172E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5CF2346-F491-48C0-8265-5606251172E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5CF2346-F491-48C0-8265-5606251172E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\TransientFaultHandling.Core.5.1.1209.1\lib\NET4
+	EndGlobalSection
+EndGlobal

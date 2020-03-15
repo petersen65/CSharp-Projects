@@ -1,0 +1,6 @@
+﻿43, Dreiundvierzig
+42, Zweiundvierzig
+16, Sechzehn
+15, Fuenfzehn
+70, Siebzig
+65, Fuenfundsechzig

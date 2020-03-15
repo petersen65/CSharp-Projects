@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="LSHTTP.Gateway.Push.Notification" CodeBehind="Notification.svc.cs" %>

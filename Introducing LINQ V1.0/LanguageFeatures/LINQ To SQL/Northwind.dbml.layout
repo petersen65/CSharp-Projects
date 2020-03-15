@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Northwind">
+  <DataContextMoniker Name="/NorthwindDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f5726259-541d-4a13-802c-7508fa004706" absoluteBounds="0.5, 0.5, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/NorthwindDataContext/Category" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e7ce2312-c660-4193-834f-8d82fd0a7ccb" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c99d7b52-d723-454b-b20c-ae70295f7680" absoluteBounds="4.625, 0.5, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/NorthwindDataContext/Product" />
+      <nestedChildShapes>
+        <elementListCompartment Id="11011809-ca56-457d-924c-4896e7cd5d41" absoluteBounds="4.64, 0.96, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 1.21242390950521); (4.625 : 1.21242390950521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/NorthwindDataContext/Category/Category_Product" />
+      <nodes>
+        <classShapeMoniker Id="f5726259-541d-4a13-802c-7508fa004706" />
+        <classShapeMoniker Id="c99d7b52-d723-454b-b20c-ae70295f7680" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="db1541af-b1e1-4c9f-9c99-0772f03c4b43" absoluteBounds="7.625, 5.625, 2, 0.76745849609374961">
+      <DataClassMoniker Name="/NorthwindDataContext/Seafood" />
+      <nestedChildShapes>
+        <elementListCompartment Id="69964445-23c8-4f86-86c4-fd5c5483b757" absoluteBounds="7.625, 5.625, 0.125, 0.20745849609375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7df60777-ff33-4e32-bc23-4f70c408e9e0" absoluteBounds="2.875, 5.625, 2, 0.76745849609374961">
+      <DataClassMoniker Name="/NorthwindDataContext/Beverage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5fb56688-0435-4f8b-acc9-82f892a1b377" absoluteBounds="2.875, 5.625, 0.125, 0.20745849609375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="74cc473f-c991-4ed9-bc4b-3813154598db" absoluteBounds="7.625, 4.625, 2, 0.76745849609374961">
+      <DataClassMoniker Name="/NorthwindDataContext/Poultry" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f0e09e9a-ff38-4daa-892a-863f5612dbdc" absoluteBounds="7.625, 4.625, 0.125, 0.20745849609375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="475f41c9-dbc6-45a5-9c37-0632afd13efe" absoluteBounds="0.5, 4.625, 2, 0.76745849609374961">
+      <DataClassMoniker Name="/NorthwindDataContext/Dairy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8493db34-0a6d-46cc-ab7b-bd2acdbf7b2b" absoluteBounds="0.5, 4.625, 0.125, 0.20745849609375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="23c49994-ad95-46c1-bb85-9dcfa68d6488" absoluteBounds="0.5, 5.625, 2, 0.76745849609374961">
+      <DataClassMoniker Name="/NorthwindDataContext/Cereal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="075ef57f-8ab1-4c9f-b0c1-6b4ac95c5c5c" absoluteBounds="0.5, 5.625, 0.125, 0.20745849609375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="48f9dfa7-2905-4956-b6e0-967746e0264d" absoluteBounds="5.25, 4.625, 2, 0.76745849609374961">
+      <DataClassMoniker Name="/NorthwindDataContext/Produce" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9ece136f-3ec7-4831-abab-602522b636e5" absoluteBounds="5.25, 4.625, 0.125, 0.20745849609375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d6e02e63-91fe-4951-9712-0cf28fce0696" absoluteBounds="5.25, 5.625, 2, 0.76745849609374961">
+      <DataClassMoniker Name="/NorthwindDataContext/Confection" />
+      <nestedChildShapes>
+        <elementListCompartment Id="52e5005d-f0ff-415c-981e-c08c05450464" absoluteBounds="5.25, 5.625, 0.125, 0.20745849609375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="854efab3-4e26-47d9-9f27-5e633d1aaa0c" absoluteBounds="2.875, 4.625, 2, 0.76745849609374961">
+      <DataClassMoniker Name="/NorthwindDataContext/Condiment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="873d8ae5-2aa1-4339-bc96-a4972cd852c2" absoluteBounds="2.875, 4.625, 0.125, 0.20745849609375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <inheritanceConnector edgePoints="[(5.625 : 2.91093180338542); (5.625 : 4.25); (1.5 : 4.25); (1.5 : 4.625)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="7a7fe09e-e9ef-4b01-9ff3-bde95e827b62">
+      <nodes>
+        <classShapeMoniker Id="c99d7b52-d723-454b-b20c-ae70295f7680" />
+        <classShapeMoniker Id="475f41c9-dbc6-45a5-9c37-0632afd13efe" />
+      </nodes>
+    </inheritanceConnector>
+    <inheritanceConnector edgePoints="[(5.625 : 2.91093180338542); (5.625 : 4.54308); (5.16808 : 4.54308); (5.16808 : 5.50212); (1.5 : 5.50212); (1.5 : 5.625)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="7a7fe09e-e9ef-4b01-9ff3-bde95e827b62">
+      <nodes>
+        <classShapeMoniker Id="c99d7b52-d723-454b-b20c-ae70295f7680" />
+        <classShapeMoniker Id="23c49994-ad95-46c1-bb85-9dcfa68d6488" />
+      </nodes>
+    </inheritanceConnector>
+    <inheritanceConnector edgePoints="[(5.625 : 2.91093180338542); (5.625 : 4.25); (3.875 : 4.25); (3.875 : 4.625)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="7a7fe09e-e9ef-4b01-9ff3-bde95e827b62">
+      <nodes>
+        <classShapeMoniker Id="c99d7b52-d723-454b-b20c-ae70295f7680" />
+        <classShapeMoniker Id="854efab3-4e26-47d9-9f27-5e633d1aaa0c" />
+      </nodes>
+    </inheritanceConnector>
+    <inheritanceConnector edgePoints="[(5.625 : 2.91093180338542); (5.625 : 4.54308); (5.16808 : 4.54308); (5.16808 : 5.50212); (3.875 : 5.50212); (3.875 : 5.625)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="7a7fe09e-e9ef-4b01-9ff3-bde95e827b62">
+      <nodes>
+        <classShapeMoniker Id="c99d7b52-d723-454b-b20c-ae70295f7680" />
+        <classShapeMoniker Id="7df60777-ff33-4e32-bc23-4f70c408e9e0" />
+      </nodes>
+    </inheritanceConnector>
+    <inheritanceConnector edgePoints="[(5.625 : 2.91093180338542); (5.625 : 4.25); (6.25 : 4.25); (6.25 : 4.625)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="7a7fe09e-e9ef-4b01-9ff3-bde95e827b62">
+      <nodes>
+        <classShapeMoniker Id="c99d7b52-d723-454b-b20c-ae70295f7680" />
+        <classShapeMoniker Id="48f9dfa7-2905-4956-b6e0-967746e0264d" />
+      </nodes>
+    </inheritanceConnector>
+    <inheritanceConnector edgePoints="[(5.625 : 2.91093180338542); (5.625 : 4.54308); (5.16808 : 4.54308); (5.16808 : 5.50212); (6.25 : 5.50212); (6.25 : 5.625)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="7a7fe09e-e9ef-4b01-9ff3-bde95e827b62">
+      <nodes>
+        <classShapeMoniker Id="c99d7b52-d723-454b-b20c-ae70295f7680" />
+        <classShapeMoniker Id="d6e02e63-91fe-4951-9712-0cf28fce0696" />
+      </nodes>
+    </inheritanceConnector>
+    <inheritanceConnector edgePoints="[(5.625 : 2.91093180338542); (5.625 : 4.25); (8.625 : 4.25); (8.625 : 4.625)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="7a7fe09e-e9ef-4b01-9ff3-bde95e827b62">
+      <nodes>
+        <classShapeMoniker Id="c99d7b52-d723-454b-b20c-ae70295f7680" />
+        <classShapeMoniker Id="74cc473f-c991-4ed9-bc4b-3813154598db" />
+      </nodes>
+    </inheritanceConnector>
+    <inheritanceConnector edgePoints="[(5.625 : 2.91093180338542); (5.625 : 4.54308); (7.33192 : 4.54308); (7.33192 : 5.50212); (8.625 : 5.50212); (8.625 : 5.625)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="7a7fe09e-e9ef-4b01-9ff3-bde95e827b62">
+      <nodes>
+        <classShapeMoniker Id="c99d7b52-d723-454b-b20c-ae70295f7680" />
+        <classShapeMoniker Id="db1541af-b1e1-4c9f-9c99-0772f03c4b43" />
+      </nodes>
+    </inheritanceConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

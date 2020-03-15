@@ -1,0 +1,3 @@
+﻿ALTER TABLE [dbo].[CommandTopic]
+	ADD CONSTRAINT [PK_CommandTopic_Id]
+	PRIMARY KEY CLUSTERED ([Id] ASC)

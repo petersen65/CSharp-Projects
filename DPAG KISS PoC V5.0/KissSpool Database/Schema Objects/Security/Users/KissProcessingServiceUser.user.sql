@@ -1,0 +1,3 @@
+﻿CREATE USER [KissProcessingServiceUser]
+	WITHOUT LOGIN
+	WITH DEFAULT_SCHEMA = [dbo]

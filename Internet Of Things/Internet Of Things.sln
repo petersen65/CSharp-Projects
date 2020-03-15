@@ -1,0 +1,132 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{261D8A59-7DFD-4E9E-B824-B686AA7F13A9}"
+	ProjectSection(SolutionItems) = preProject
+		Prepare Partition.ps1 = Prepare Partition.ps1
+		StartAllBackendWorkers.cmd = StartAllBackendWorkers.cmd
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample Data", "Sample Data", "{947C3833-C9A1-4C85-876D-EFA304BB9647}"
+	ProjectSection(SolutionItems) = preProject
+		Sample Data\CommandTopic.csv = Sample Data\CommandTopic.csv
+		Sample Data\Partition.csv = Sample Data\Partition.csv
+		Sample Data\Thing.csv = Sample Data\Thing.csv
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{95356565-2094-4A84-95BA-4CA22CA18143}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACS.Common", "ACS.Common\ACS.Common.csproj", "{E91A66A6-178A-4C98-9D8D-D1E3C1E56459}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Base Libraries", "Base Libraries", "{6F085ACF-1A09-4752-9734-C2892435DB6B}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "IOT.Database", "IOT.Database\IOT.Database.sqlproj", "{8FA50C25-FDD8-4367-8644-5D2C8E262D92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOT.DataModel", "IOT.DataModel\IOT.DataModel.csproj", "{51D6FF8E-C601-40F3-ADB2-760998E4A95D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Access", "Data Access", "{B5D78BED-78DB-4DE2-B4FF-6E97FC4DA486}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOT.Core", "IOT.Core\IOT.Core.csproj", "{B28F17EA-D401-4760-BA9A-DFA161627507}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOT.Client", "IOT.Client\IOT.Client.csproj", "{D41BA17B-B8CA-4026-AAEC-05396CD6CBDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOT.Server", "IOT.Server\IOT.Server.csproj", "{F42A801D-E1CB-4038-BE37-85C9404E6A01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOT.Device", "IOT.Device\IOT.Device.csproj", "{719C355B-E384-41B7-A91A-64DC442CB72B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOT.Backend", "IOT.Backend\IOT.Backend.csproj", "{6470B2C9-B1EC-4F9E-B252-BE12D60E3FA3}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://petersen.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ACS.Common\\ACS.Common.csproj
+		SccProjectTopLevelParentUniqueName1 = Internet\u0020Of\u0020Things.sln
+		SccProjectName1 = ACS.Common
+		SccLocalPath1 = ACS.Common
+		SccProjectUniqueName2 = IOT.Database\\IOT.Database.sqlproj
+		SccProjectTopLevelParentUniqueName2 = Internet\u0020Of\u0020Things.sln
+		SccProjectName2 = IOT.Database
+		SccLocalPath2 = IOT.Database
+		SccProjectUniqueName3 = IOT.DataModel\\IOT.DataModel.csproj
+		SccProjectTopLevelParentUniqueName3 = Internet\u0020Of\u0020Things.sln
+		SccProjectName3 = IOT.DataModel
+		SccLocalPath3 = IOT.DataModel
+		SccProjectUniqueName4 = IOT.Core\\IOT.Core.csproj
+		SccProjectTopLevelParentUniqueName4 = Internet\u0020Of\u0020Things.sln
+		SccProjectName4 = IOT.Core
+		SccLocalPath4 = IOT.Core
+		SccProjectUniqueName5 = IOT.Client\\IOT.Client.csproj
+		SccProjectTopLevelParentUniqueName5 = Internet\u0020Of\u0020Things.sln
+		SccProjectName5 = IOT.Client
+		SccLocalPath5 = IOT.Client
+		SccProjectUniqueName6 = IOT.Server\\IOT.Server.csproj
+		SccProjectTopLevelParentUniqueName6 = Internet\u0020Of\u0020Things.sln
+		SccProjectName6 = IOT.Server
+		SccLocalPath6 = IOT.Server
+		SccProjectUniqueName7 = IOT.Device\\IOT.Device.csproj
+		SccProjectName7 = IOT.Device
+		SccLocalPath7 = IOT.Device
+		SccProjectUniqueName8 = IOT.Backend\\IOT.Backend.csproj
+		SccProjectName8 = IOT.Backend
+		SccLocalPath8 = IOT.Backend
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E91A66A6-178A-4C98-9D8D-D1E3C1E56459}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E91A66A6-178A-4C98-9D8D-D1E3C1E56459}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E91A66A6-178A-4C98-9D8D-D1E3C1E56459}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E91A66A6-178A-4C98-9D8D-D1E3C1E56459}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FA50C25-FDD8-4367-8644-5D2C8E262D92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FA50C25-FDD8-4367-8644-5D2C8E262D92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FA50C25-FDD8-4367-8644-5D2C8E262D92}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8FA50C25-FDD8-4367-8644-5D2C8E262D92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FA50C25-FDD8-4367-8644-5D2C8E262D92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FA50C25-FDD8-4367-8644-5D2C8E262D92}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{51D6FF8E-C601-40F3-ADB2-760998E4A95D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51D6FF8E-C601-40F3-ADB2-760998E4A95D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51D6FF8E-C601-40F3-ADB2-760998E4A95D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51D6FF8E-C601-40F3-ADB2-760998E4A95D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B28F17EA-D401-4760-BA9A-DFA161627507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B28F17EA-D401-4760-BA9A-DFA161627507}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B28F17EA-D401-4760-BA9A-DFA161627507}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B28F17EA-D401-4760-BA9A-DFA161627507}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D41BA17B-B8CA-4026-AAEC-05396CD6CBDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D41BA17B-B8CA-4026-AAEC-05396CD6CBDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D41BA17B-B8CA-4026-AAEC-05396CD6CBDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D41BA17B-B8CA-4026-AAEC-05396CD6CBDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F42A801D-E1CB-4038-BE37-85C9404E6A01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F42A801D-E1CB-4038-BE37-85C9404E6A01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F42A801D-E1CB-4038-BE37-85C9404E6A01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F42A801D-E1CB-4038-BE37-85C9404E6A01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{719C355B-E384-41B7-A91A-64DC442CB72B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{719C355B-E384-41B7-A91A-64DC442CB72B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{719C355B-E384-41B7-A91A-64DC442CB72B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{719C355B-E384-41B7-A91A-64DC442CB72B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6470B2C9-B1EC-4F9E-B252-BE12D60E3FA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6470B2C9-B1EC-4F9E-B252-BE12D60E3FA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6470B2C9-B1EC-4F9E-B252-BE12D60E3FA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6470B2C9-B1EC-4F9E-B252-BE12D60E3FA3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E91A66A6-178A-4C98-9D8D-D1E3C1E56459} = {6F085ACF-1A09-4752-9734-C2892435DB6B}
+		{B28F17EA-D401-4760-BA9A-DFA161627507} = {6F085ACF-1A09-4752-9734-C2892435DB6B}
+		{D41BA17B-B8CA-4026-AAEC-05396CD6CBDC} = {6F085ACF-1A09-4752-9734-C2892435DB6B}
+		{F42A801D-E1CB-4038-BE37-85C9404E6A01} = {6F085ACF-1A09-4752-9734-C2892435DB6B}
+		{51D6FF8E-C601-40F3-ADB2-760998E4A95D} = {B5D78BED-78DB-4DE2-B4FF-6E97FC4DA486}
+		{8FA50C25-FDD8-4367-8644-5D2C8E262D92} = {B5D78BED-78DB-4DE2-B4FF-6E97FC4DA486}
+	EndGlobalSection
+EndGlobal

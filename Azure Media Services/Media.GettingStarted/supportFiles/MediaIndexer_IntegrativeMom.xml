@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration version="2.0">
+  <input>
+    <!-- [Optional] Metadata of the input media file(s) -->
+    <!-- Format: <metadata key="..." value="..." /> -->
+    <metadata key="title" value="Integrative Mom and Windows Phone App Studio" />
+    <metadata key="description" value="Holly Shore discusses her experience building her own app for Integrative Mom using Windows Phone App Studio, a free, web-based app builder that can help many small business owners like Holly get up and running quickly to extend their reach with a Windows Phone app." />
+  </input>
+  <settings>
+  </settings>
+</configuration>

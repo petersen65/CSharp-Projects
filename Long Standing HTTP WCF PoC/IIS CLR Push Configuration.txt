@@ -1,0 +1,3 @@
+system.web/httpRuntime: appRequestQueueLimit = 16384
+system.webServer/serverRuntime: appConcurrentRequestLimit = 16384
+system.applicationHost/applicationPools: LsHttpAppPool (queueLength = 16384, managedRuntimeVersion = v4.0, managedPipelineMode = Integrated, startMode = AlwaysRunning, CLRConfigFile = '<Path>\Aspnet.Config')
